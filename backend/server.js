@@ -3,6 +3,7 @@ const routes = require("./routes/csvRoutes");
 const app = express();
 const cors = require("cors");
 require("dotenv").config();
+app.options("*", cors());
 app.use(cors({
     credentials: true, //if you are using authentication.
    origin: 'https://dash-board-ashy-xi.vercel.app',
