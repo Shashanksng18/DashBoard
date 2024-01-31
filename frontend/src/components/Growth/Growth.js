@@ -11,7 +11,7 @@ const Growth = () => {
   const fetchData = async () => {
     const response = await fetch(`https://dash-board-ashy-xi.vercel.app/${API_KEY}`); 
     if(!response.ok) {
-      throw new Error("Cannot fech")
+      throw new Error("Cannot fetch")
     }
     const data = await response.json();
     setData(data);
