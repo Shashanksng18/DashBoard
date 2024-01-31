@@ -4,12 +4,12 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 app.options("*", cors());
-app.use(cors({
-    credentials: true, //if you are using authentication.
-   origin: 'https://dash-board-ashy-xi.vercel.app',
-   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-   headers: 'Authorization, Content-Type',
-}));
+app.use(cors({    
+     origin: '*',   
+     methods: '*',   
+     allowedHeaders: ['Content-Type', 'Authorization'],
+     credentials: true,  
+     }));
 
 app.get("/", (req, res) => {
     res.json("dashboard vercel api api")
