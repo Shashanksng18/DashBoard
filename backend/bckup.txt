@@ -1,0 +1,56 @@
+module.exports.read_csv = async (req, res) => {
+    try {
+        const rawData = await csv().fromFile(req.file.path);
+
+        if (!rawData || rawData.length === 0) {
+            throw new Error("Empty or undefined data in CSV file.");
+        }
+
+        // Map the data to the required format
+        const yearData = rawData.map(row => ({
+            time: row.Timestamp ? row.Timestamp : null,
+            profit: row['Profit Percentage'] ? parseFloat(row['Profit Percentage']) : null
+        }));
+
+        if (yearData.some(row => row.time === null || row.profit === null)) {
+            throw new Error("Invalid data in CSV file. Check Timestamp and Profit Percentage columns.");
+        }
+
+        // Apply Max-Min downsampling
+        const targetSize = 10; // You can adjust this based on your requirements
+        const downsampledData = maxMinDownsample(yearData, targetSize);
+
+        // Write downsampled data to a new CSV file
+        const outputFilePath = 'downsampled_dataset.csv';
+        const outputContent = `Timestamp,Profit Percentage\n${downsampledData.map(row => `${row.time},${row.profit}`).join('\n')}`;
+        fs.writeFileSync(outputFilePath, outputContent, 'utf8');
+
+        res.send({ success: true, msg: "Downsampling completed successfully." });
+    } catch (err) {
+        console.error(err);
+        res.send({ success: false, msg: err.message });
+    }
+};
+
+
+module.exports.get_csv_data = (req, res) => {
+    const rows = [];
+ fs.createReadStream(csvFilePath)
+  .pipe(csvParser())
+  .on('data', (row) => {
+    // Process each row as it is read
+    rows.push(row);
+  })
+  .on('end', () => {
+    // All rows have been read
+    console.log(rows.length)
+    // console.log('CSV file successfully processed:', rows);
+    res.json(rows)
+  })
+  .on('error', (error) => {
+    console.error('Error reading CSV file:', error.message);
+  });
+}
+const API_KEY = process.env.REACT_APP_GET_CSV_DATA;
+
+const response = await fetch(`https://dash-board-cyan.vercel.app/${API_KEY}`);

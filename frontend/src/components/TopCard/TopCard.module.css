@@ -1,0 +1,74 @@
+
+.top-card {
+    width: 169px;
+    height: 128px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.heading p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7D7D7D;
+}
+.top-card h2 {
+    color: #734A00;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.top-card .info {
+    width: 137px;
+    height: 61px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.info span {
+    color: #FFA500;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.top-buyer {
+    width: 169px;
+    height: 128px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.top-buyer img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.top-buyer .heading p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7D7D7D;
+}
+.top-buyer .info p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #131313;
+    text-transform: capitalize;
+}
+.top-buyer .info span {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #454545;text-transform: capitalize;
+}

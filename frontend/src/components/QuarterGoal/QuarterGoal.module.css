@@ -1,0 +1,64 @@
+.quarter-goal {
+    width: 260px;
+    height: 262px;
+    margin-left: 1rem;
+    padding: 16px;
+}
+.quarter-goal .heading {
+    width: 212px;
+    padding-bottom: 16px;
+}
+.heading h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.circle {
+    width: 210px;
+    height: 102px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border: 15px solid #FFCD71;
+    border-right-color: #FFF7E8;
+    border-bottom: 0;
+    position: relative;
+}
+.circle span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 500;
+    align-items: center;
+    line-height: 38px;
+}
+.all-goals {
+    width: 72px;
+    height: 56px;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 8px;
+}
+.all-goals button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.3px;
+    color: #734A00;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.all-goals img {
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,110 @@
+.customers {
+    width: 556px;
+    height: 400px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+.heading .sort {
+    cursor: pointer;
+}
+.actions {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 50%;
+}
+.customer-info {
+    width: 50%;
+}
+.heading > div {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.heading span {
+    font-weight: 500;
+    line-height: 17px;
+    text-transform: capitalize;
+}
+.actions {
+    visibility: hidden;
+}
+.actions figure {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.actions figure img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+.customers .heading h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+.customer-section article {
+    width: 540px;
+    height: 66px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+article h1 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    margin-bottom: 2px;
+}
+article p {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #454545;
+}
+.customer-section img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.active {
+    background-color: #FFF7E8;
+}
+.show-all-btn {
+    border: none;
+    outline: none;
+    color: #734A00;
+    background-color: transparent;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 16px;
+}
+.show-all-btn span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.show-all-btn img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}

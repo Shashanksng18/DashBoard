@@ -1,0 +1,56 @@
+.main-card {
+    width: 410px;
+    margin-left: 1rem;
+    padding: 20px;
+    height: 262px;
+}
+.main-card .heading {
+    height: 40px;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    color: #131313;
+}
+.revenue-percent {
+    width: 129px;
+    height: 58px;
+    margin-bottom: 8px;
+}
+.revenue-percent h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: -2px;
+    color: #131313;
+}
+.info p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #454545;
+}
+.report {
+    height: 75px;
+    width: 123px;
+    padding-top: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.report img {
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #734A00;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
