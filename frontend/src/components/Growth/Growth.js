@@ -6,7 +6,7 @@ import LineChart from "../../components/LineChart/LineChart";
 const API_KEY = process.env.REACT_APP_GET_CSV_DATA;
 
 const Growth = () => {
-  const [data, setData] = useState([]);clear
+  const [data, setData] = useState([]);
   const fetchData = async () => {
     const response = await fetch(`https://dash-board-ashy-xi.vercel.app/${API_KEY}`);
     if(!response.ok) {
