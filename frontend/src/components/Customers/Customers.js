@@ -50,7 +50,7 @@ const Customers = () => {
       </div>
       <section className={style["customer-section"]}>
         {customers.map((customer, index) => (
-          <article className={`${index === 1 && style.active}`}>
+          <article className={`${index === 1 && style.active}`} key={index}>
             <img src={customer.image} />
             <div className={style['customer-info']}>
               <h1>{customer.name}</h1>

@@ -50,7 +50,6 @@ const LineChart = ({ data }) => {
       },
     },
   };
-  console.log(data)
 
   return (
     <div>
